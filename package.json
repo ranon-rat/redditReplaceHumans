@@ -1,0 +1,20 @@
+{
+  "name": "redditgenerator",
+  "version": "1.0.0",
+  "description": "this is for replace the human",
+  "main": "carga.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "authors": "pythonBoy123, Dinosaur-debug",
+  "license": " GNU GENERAL PUBLIC LICENSE version 3, 29 June 2007",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chalk": "^4.1.0",
+    "cheerio": "^1.0.0-rc.3",
+    "figlet": "^1.5.0",
+    "node-speech": "^1.0.4"
+  }
+}
