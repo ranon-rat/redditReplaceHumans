@@ -6,7 +6,7 @@ const chalk=require("chalk")
 const figlet=require("figlet")
 
 
-async function obtieneHref(hilo,actual){
+async function obtieneHref(subreddit,actual){
 
   let reddit={
     linksVideos:[],
@@ -14,38 +14,32 @@ async function obtieneHref(hilo,actual){
 
   }
 
-  await axios.get(`https://www.reddit.com/r/${hilo}/${actual}/`)
+  await axios.get(`https://www.reddit.com/r/${subreddit}/${actual}/`)
   .then((response) => {
-        let $ = cheerio.load(response.data);
-        $('a').each((i, e)=> {
-        let h=$(e).attr('href').split("/")
+    let $ = cheerio.load(response.data);
+    $('a').each((i, e)=> {
+    let h=$(e).attr('href').split("/");
 
-
-          for(let y =0;y<h.length;y++){
-          // solo acepta las putas url que llevan a las historias
-            if(h[y]=="comments" && h[y-2]=="r"&& h.length==9 ){
-
-             	//esto es para darle un jodido nombre
-      	     	let nuevoValor = $(e).attr('href');
-
-      	     	reddit.linksVideos.push(nuevoValor)
-
+        for(let y =0;y<h.length;y++){
+          // solo acepta las url que llevan a las historias
+          if(h[y]=="comments" && h[y-2]=="r"&& h.length==9 ){
+           	//esto es para darle un  nombre
+    	     	let nuevoValor = $(e).attr('href');
+    	     	reddit.linksVideos.push(nuevoValor);
           }
         }
       });
-
-      }).catch(function (e) {
-
-        if(e){
-          console.log(chalk.inverse.red("algo a salido mal intentelo de nuevo "))
-        }
-      })
-      let a=JSON.stringify(reddit)
-      fs.writeFile("videos.json",a,(err)=>{
-        if (err) {
-          console.log(err)
-        }
-      });
+  }).catch(function (e) {
+    if(e.code==404){
+      console.log("noooo");
+      }
+  })
+  let a=JSON.stringify(reddit)
+  fs.writeFile("videos.json",a,(err)=>{
+    if (err) {
+      console.log(err);
+    }
+  });
 }
 const rl = read.createInterface({
   input: process.stdin,
@@ -56,16 +50,16 @@ function pregunta(){
     if(subreddit!=""){
     rl.question(chalk.red('[?]quieres que sea? (hot)(top)(new) '), (actual) => {
           if(actual!=""){
-          console.log(chalk.magenta(`[+]se esta obtieniendo los links del hilo: ${subreddit}`));
-          obtieneHref(subreddit,actual)
+          console.log(chalk.magenta(`[+]se esta obtieniendo los links del subreddit: ${subreddit}`));
+          obtieneHref(subreddit,actual);
           rl.close();}
           else{
-            console.log(chalk.inverse.red("ingrese (hot) o (top) o (new) hijo de puta "))
-            pregunta()
+            console.log(chalk.inverse.red("ingrese (hot) o (top) o (new) hijo de puta "));
+            pregunta();
           }
         });}else{
-          console.log(chalk.inverse.red("ingrese un subreddit hijo de puta"))
-          pregunta()
+          console.log(chalk.inverse.red("ingrese un subreddit hijo de puta"));
+          pregunta();
         }
     });
 }
