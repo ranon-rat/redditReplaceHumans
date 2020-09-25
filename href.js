@@ -35,8 +35,9 @@ async function obtieneHref(hilo,actual){
       });
 
       }).catch(function (e) {
+
         if(e){
-          console.log(e)
+          console.log(chalk.inverse.red("algo a salido mal intentelo de nuevo "))
         }
       })
       let a=JSON.stringify(reddit)
@@ -46,6 +47,29 @@ async function obtieneHref(hilo,actual){
         }
       });
 }
+const rl = read.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+function pregunta(){
+  rl.question(chalk.red('[?]que subreddit quieres obtener? '), (subreddit) => {
+    if(subreddit!=""){
+    rl.question(chalk.red('[?]quieres que sea? (hot)(top)(new) '), (actual) => {
+          if(actual!=""){
+          console.log(chalk.magenta(`[+]se esta obtieniendo los links del hilo: ${subreddit}`));
+          obtieneHref(subreddit,actual)
+          rl.close();}
+          else{
+            console.log(chalk.inverse.red("ingrese (hot) o (top) o (new) hijo de puta "))
+            pregunta()
+          }
+        });}else{
+          console.log(chalk.inverse.red("ingrese un subreddit hijo de puta"))
+          pregunta()
+        }
+    });
+}
+
 
 console.log(chalk.greenBright(figlet.textSync('reddit replace humans', {
     font: 'ANSI Shadow',
@@ -54,21 +78,5 @@ console.log(chalk.greenBright(figlet.textSync('reddit replace humans', {
     width: 80,
     whitespaceBreak: true
 })));
-const rl = read.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
 
-rl.question(chalk.red('[?]que hilo quieres obtener? '), (hilo) => {
-
-  // TODO: Log the answer in a database
-  rl.question(chalk.red('[?]quieres que sea? (hot)(top)(new) '), (actual) => {
-    // TODO: Log the answer in a database
-
-    console.log(chalk.magenta(`[+]se esta obtieniendo los links del hilo: ${hilo}`));
-     obtieneHref(hilo,actual)
-     rl.close();
-
-  })
-
-});
+pregunta();
