@@ -2,7 +2,7 @@
 
 para poder usarlo necesitas tener node.js instalado 
 
- ![alt text](https://cdn.discordapp.com/attachments/734521800125448252/755725544800256051/unknown.png) 
+ ![alt text](https://cdn.discordapp.com/attachments/714305532080554035/758915317291810816/unknown.png) 
 
 ```bash
 npm i 
@@ -30,7 +30,7 @@ y despues agregar cuantas historias quiere remover aun que obviamente habra un l
 solo extrae historias en esta version proximamente agregara otras cosas aparte del texto
 la informacion que extrae las añade a un json llamado "videos.json" el cual sirve para manejar los datos
 
-#algunas veces falla con algunos subreddits pero con los hilos mas populares funciona correctamente
+#algunas veces falla , pero normalmente funciona todo correcto
 
 
 
