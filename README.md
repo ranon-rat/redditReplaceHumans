@@ -21,15 +21,16 @@ en el caso de que no tenga linux pero tenga windows solo use el comando
 windowsindex.bat
 
 ```
+en el caso de que no nombre el subreddit o que no nombre si quiere que sea nuevo,top, o hot le saldra un hermoso mensaje 
 
-despues de eso debe de ingresar algun hilo de reddit como nosleep
+despues de eso debe de ingresar algun subreddit de reddit como nosleep
 y agregar si quiere que sea el top new o hot
 y despues agregar cuantas historias quiere remover aun que obviamente habra un limite
 
 solo extrae historias en esta version proximamente agregara otras cosas aparte del texto
 la informacion que extrae las añade a un json llamado "videos.json" el cual sirve para manejar los datos
 
-#algunas veces falla con algunos hilos pero con los hilos mas populares funciona correctamente
+#algunas veces falla con algunos subreddits pero con los hilos mas populares funciona correctamente
 
 
 
