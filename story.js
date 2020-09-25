@@ -98,26 +98,33 @@ async function cargahistoria(repeticion){
 		}
 	}
 	else{
-		console.log(chalk.inverse.red(`coño de la madre ingrese un valor que no supere a ${json.linksVideos.length}`));
 		pregunta();
+		console.log(chalk.inverse.red(`coño de la madre ingrese un valor que no supere a ${json.linksVideos.length}`));
+
 	}
 }
+
 const rl = read.createInterface({
 	input: process.stdin,
 	output: process.stdout
-  });
+});
+
 function pregunta(){//es para evitar que se equivoquen hijos de puta
 	rl.question(chalk.yellow(`[?] ¿Cuantas historias quiere? (limite ${json.linksVideos.length}) `), (answer) => {
 		if(answer!=""){
-			console.log(chalk.redBright(`[+] agregando historias`));
+
 				try{
+					console.log(chalk.redBright(`[+] agregando historias`));
 					cargahistoria(parseInt(answer,10));
-					rl.close();
+					rl.close()
 				}catch(e){
 					if(e){
 					 console.log(chalk.inverse.red("el coño de tu madre ingresa un valor valido"));
 					 pregunta();
+				 }else{
+					 rl.close()
 				 }
+
 			 }
 		}
 		else{
