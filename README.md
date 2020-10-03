@@ -30,10 +30,10 @@ y despues agregar cuantas historias quiere remover aun que obviamente habra un l
 solo extrae historias en esta version proximamente agregara otras cosas aparte del texto
 la informacion que extrae las añade a un json llamado "videos.json" el cual sirve para manejar los datos
 
-#algunas veces falla , pero normalmente funciona todo correcto
+***algunas veces falla , pero normalmente funciona todo correcto***
 
 
-#english documentation
+***english documentation***
 first you need to install the package with the commando 
 
 `npm i`
@@ -47,4 +47,5 @@ windows you need to use the command
 
 this project was maked in spanish but the instructions was so basic
 **first:** put the subreddit where you want to extract the post
-**second** put how many histories you want
+**second** put if you want a hot,new or top 
+**third** put how many histories you want
