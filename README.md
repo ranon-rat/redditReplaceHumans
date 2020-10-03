@@ -33,7 +33,7 @@ la informacion que extrae las añade a un json llamado "videos.json" el cual sir
 ***algunas veces falla , pero normalmente funciona todo correcto***
 
 
-***english documentation***
+# ***english documentation***
 
 
 first you need to install the package with the command 
@@ -42,12 +42,16 @@ first you need to install the package with the command
 
 and the you need to execute the index and for that you need to use the command
 
-```bash index.sh```
+```bash
+bash index.sh
+```
 
 if you are in linux obviosly but if your are in
 windows you need to use the command
 
-```windowsindex.bat```
+```bash
+windowsindex.bat
+```
 
 **basic instructions**
 
