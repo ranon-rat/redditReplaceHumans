@@ -39,15 +39,22 @@ la informacion que extrae las añade a un json llamado "videos.json" el cual sir
 first you need to install the package with the commando 
 
 `npm i`
+
 and the you need to execute the index and for that you need to use the command
+
 `bash index.sh`
+
 if you are in linux obviosly but if your are in
 windows you need to use the command
+
 `windowsindex.bat`
 
-#basic instructions
+**basic instructions**
 
 this project was maked in spanish but the instructions was so basic
+
 **first:** put the subreddit where you want to extract the post
+
 **second** put if you want a hot,new or top 
+
 **third** put how many histories you want
