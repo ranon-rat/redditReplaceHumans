@@ -57,4 +57,4 @@ this project was maked in spanish but the instructions was so basic
 
 **second** put if you want a hot,new or top 
 
-**third** put how many histories you want
+**third** put how many stories you want
