@@ -33,4 +33,18 @@ la informacion que extrae las añade a un json llamado "videos.json" el cual sir
 #algunas veces falla , pero normalmente funciona todo correcto
 
 
+#english documentation
+first you need to install the package with the commando 
 
+`npm i`
+and the you need to execute the index and for that you need to use the command
+`bash index.sh`
+if you are in linux obviosly but if your are in
+windows you need to use the command
+`windowsindex.bat`
+
+#basic instructions
+
+this project was maked in spanish but the instructions was so basic
+**first:** put the subreddit where you want to extract the post
+**second** put how many histories you want
