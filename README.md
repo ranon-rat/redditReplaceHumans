@@ -1,4 +1,4 @@
-# it doesnt works really well , it was one of my first projects and its really shitty ,i want to clean it but im too lazy for do that
+# it doesnt works really well , it was one of my first projects and its really shitty ,i want to improve it and make the video generator but im too lazy for do that 
 # Reddit replace humans
 
 para poder usarlo necesitas tener node.js instalado 
