@@ -1,6 +1,8 @@
+# it doesnt works really well , it was one of my first projects and its really shitty ,i want to clean it but im too lazy for do that
 # Reddit replace humans
 
 para poder usarlo necesitas tener node.js instalado 
+
 
  ![alt text](https://cdn.discordapp.com/attachments/714305532080554035/758915317291810816/unknown.png) 
 
